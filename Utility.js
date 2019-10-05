@@ -110,7 +110,7 @@ methods.withdraw = function (withdrawAmount, globalBalance) {
             console.log("Cash is not present !");
         }
         console.log("Updated amount is = " + globalBalance);
-        // return globalBalance;
+        return globalBalance;
     }
     else {
         console.log("Enter Valid amount");
@@ -118,24 +118,24 @@ methods.withdraw = function (withdrawAmount, globalBalance) {
     }
     // console.log("Global Balance : " + globalBalance);
     
-    return this.globalBalance;
+    // return this.globalBalance;
 }
 
 
 methods.deposit = function (depositAmount, globalBalance) {
-    var oldAmount = globalBalance;
+    var oldAmount = parseInt(globalBalance);
     if (depositAmount > 0) {
 
-        console.log("old amount  ", oldAmount)
+        console.log("old amount  " + oldAmount)
         globalBalance = parseInt(globalBalance) + parseInt(depositAmount);  // updating bank amount
         console.log("updated amount = " + globalBalance);
-        // return globalBalance
+        return globalBalance
     }
     else {
         console.log("please Enter valid amount");
         return false;
     }
-    return this.globalBalance;
+    // return this.globalBalance;
 }
 
 

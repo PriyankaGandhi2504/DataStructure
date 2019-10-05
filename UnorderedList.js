@@ -19,7 +19,7 @@ const fs = require('fs')
 const linklist = require("./LinkListClass")
 const list = new linklist.LinkList
 var splitwords = []
-var keyword
+var keyword; var indexOfKeyword;
 
 fs.readFile('InputFile.txt', (err, data) => {
     var paragraph = data.toString()
@@ -47,17 +47,18 @@ fs.readFile('InputFile.txt', (err, data) => {
     if (searchelement) {
         console.log("Element Found");
         console.log("Removing Element from list");
-        removeelementfromlist = list.removeElement(keyword)
-        console.log("Remove Element From List : " + removeelementfromlist);
-        var printdata = list.printListData()
+        indexOfKeyword = list.searchIndex(keyword)
+        // console.log("Index Value : " + indexOfKeyword);
+        
+        // removeelementfromlist = list.removeAtIndex(indexOfKeyword)
+        console.log("Remove Element From List : " + indexOfKeyword);
+        list.printListData()
     } else {
         console.log("Not Found");
         console.log("Adding Element to the list");
         addelementtolist = list.addElement(keyword)
         console.log("Adding Element to List : " + addelementtolist);
-        var printdata = list.printListData()
-    }
-    
+        list.printListData()
+    }   
     // console.log("Print Data : " + printdata);
-
 })

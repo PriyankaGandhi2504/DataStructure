@@ -24,32 +24,19 @@ function isString() {
     console.log("Enter any string");
     var string = input.data.input()
     var originalstring = string
-    var stringvalidation = input.data.enterString(string)
+    var stringvalidation = input.data.enterString(string)       //function to check if input is string or not
     if (stringvalidation == true) {
-        string = string.split("")
+        string = string.split("")           //splitting a string to an individual character
         console.log("Array Elements: " + string);
         for (i = string.length - 1; i >= 0; i--) {
-            // console.log("Last Element : " + string[0]);
-
-            addingelement = list.addElement(string[i])
-            // console.log("Added Elements: " + addingelement);
+            addingelement = list.addElement(string[i])      //adding individual character to linklist as a node in reverse order
             reversedString += addingelement
         }
-        // console.log("Updated values : " + reversedString);
-        // addingelement = addingelement.split("")
-        // console.log("Array Length : " + array.length);
-
-        for (i = 0; i <= reversedString.length - 1; i++) {
-            // console.log("Dequeue values " + reversedString[i]);
-            reverseelement = list.dequeueElement()
-            // console.log("Reversed Elements: " + reverseelement);
-            // reversearray += reverseelement
+        for (i = 0; i <= reversedString.length - 1; i++) {     
+            reverseelement = list.dequeueElement()          //dequeue function called to get a string to be compared for palindrome
         }
         console.log("Reversed Elements: " + reverseelement);
-        // console.log("Reverse String : " + reversearray);
-        // console.log("Original String = " + originalstring);
-
-        if (originalstring == reverseelement) {
+        if (originalstring == reverseelement) {     //condition to check if strings are palindrome
             console.log("Strings are palindrome");
         } else {
             console.log("Strings are not palindrome");

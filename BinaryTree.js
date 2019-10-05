@@ -20,7 +20,7 @@ function binary(numberOfNodes) {
             throw "Enter valid number of nodes"
         } else {
             // calculate number of trees.
-            var result = input.data.binaryTree(numberOfNodes);
+            var result = input.data.binaryTree(numberOfNodes);     // calling a binary tree function to calculate number of trees
         }
         console.log("Number of Trees formed from " + numberOfNodes + " are : " + result);
     } catch (err) {
