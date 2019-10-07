@@ -304,18 +304,3 @@ methods.primeNumber = function (n) {
     //  console.log("Prime Numbers: "+JSON.stringify(arr))
     return arr;
 }
-
-/**
- * Function of Calendar
- */
-methods.calendar = function (month, year) {
-    var month = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
-    var dayOfWeek = ['0', '1', '2', '3', '4', '5', '6']
-}
-
-// methods.dayOfWeek = function (dayOfWeek, month, year) {
-//     a = year​ − ((14 − ​ month) / 12)
-//     x = a + a / 4 − a / 100 + a / 400
-//     m0 = month + 12 × ((14 − ​ month) / 12) − 2
-//     d0 = (dayOfWeek + x + 31​ * m​0 / 12) % 7
-// }
