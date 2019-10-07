@@ -117,7 +117,7 @@ methods.withdraw = function (withdrawAmount, globalBalance) {
         return false
     }
     // console.log("Global Balance : " + globalBalance);
-    
+
     // return this.globalBalance;
 }
 
@@ -149,18 +149,18 @@ methods.binaryTree = function (numberOfNodes) {
         console.log(" number should be between 1 to 1000");
     }
 
-    
+
     return numberOfTrees;
 }
 
 
-methods.factorial = function(numberOfNodes){
-        let fact = 1;
-        for (i = 1; i <= numberOfNodes; i++) {
-            fact = fact * i;
-        }
-        return fact;
+methods.factorial = function (numberOfNodes) {
+    let fact = 1;
+    for (i = 1; i <= numberOfNodes; i++) {
+        fact = fact * i;
     }
+    return fact;
+}
 
 /*
 * Function to calculate Prime Range
@@ -194,7 +194,7 @@ methods.isAnagramPrime = function (startrange, endrange) {
     var primes = this.primerange(startrange, endrange);
     var n = primes.length;
     // console.log("Length : " + n);
-    
+
     var anagramPrimes = [];
     var k = 0;
     for (let i = 0; i < n; i++) {
@@ -203,16 +203,16 @@ methods.isAnagramPrime = function (startrange, endrange) {
                 // anagramPrimes[k++] = primes[i];
                 // anagramPrimes[k++] = primes[j];
             }
-            
+
         }
         anagramPrimes[k++] = primes[i];
     }
-    
+
     return anagramPrimes;
 }
 
 
-methods.checkIfAnagram = function(str1, str2) {
+methods.checkIfAnagram = function (str1, str2) {
     var b;
     let string1 = str1;
     let string2 = str2;
@@ -230,7 +230,7 @@ methods.checkIfAnagram = function(str1, str2) {
     }
 }
 
-methods.check = function(string1, string2){
+methods.check = function (string1, string2) {
     for (let i = 0; i < string1.length; i++) {
         if (string1.charAt(i) != string2.charAt(i)) {
             return false;
@@ -240,23 +240,23 @@ methods.check = function(string1, string2){
 }
 
 
-methods.sort = function(string1){
+methods.sort = function (string1) {
     string1 = string1.toString()
     let char = string1.split("");
-        for (let i = 0; i < string1.length; i++) {
-            for (let j = i + 1; j < string1.length; j++) {
-                if (char[i] > char[j]) {
-                    let temp = char[i];
-                    char[i] = char[j];
-                    char[j] = temp;
-                }
+    for (let i = 0; i < string1.length; i++) {
+        for (let j = i + 1; j < string1.length; j++) {
+            if (char[i] > char[j]) {
+                let temp = char[i];
+                char[i] = char[j];
+                char[j] = temp;
             }
         }
-        var sortedString = "";
-        for (let i = 0; i < char.length; i++) {
-            sortedString += char[i];
-        }
-        return sortedString;
+    }
+    var sortedString = "";
+    for (let i = 0; i < char.length; i++) {
+        sortedString += char[i];
+    }
+    return sortedString;
 }
 
 
@@ -264,7 +264,7 @@ methods.isAnagramAndPrime = function (number) {
     var primes = this.primeNumber(number);
     var n = primes.length;
     // console.log("Length : " + n);
-    
+
     var anagramPrimes = [];
     var k = 0;
     for (let i = 0; i < n; i++) {
@@ -273,11 +273,11 @@ methods.isAnagramAndPrime = function (number) {
                 // anagramPrimes[k++] = primes[i];
                 // anagramPrimes[k++] = primes[j];
             }
-            
+
         }
         anagramPrimes[k++] = primes[i];
     }
-    
+
     return anagramPrimes;
 }
 
@@ -304,3 +304,18 @@ methods.primeNumber = function (n) {
     //  console.log("Prime Numbers: "+JSON.stringify(arr))
     return arr;
 }
+
+/**
+ * Function of Calendar
+ */
+methods.calendar = function (month, year) {
+    var month = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+    var dayOfWeek = ['0', '1', '2', '3', '4', '5', '6']
+}
+
+// methods.dayOfWeek = function (dayOfWeek, month, year) {
+//     a = year​ − ((14 − ​ month) / 12)
+//     x = a + a / 4 − a / 100 + a / 400
+//     m0 = month + 12 × ((14 − ​ month) / 12) − 2
+//     d0 = (dayOfWeek + x + 31​ * m​0 / 12) % 7
+// }

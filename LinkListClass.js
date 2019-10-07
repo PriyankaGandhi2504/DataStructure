@@ -93,7 +93,7 @@ const stack = new stackinput.Stack
                 // console.log("Counter Value: " + counter);
                 return this.removeAtIndex(counter)
             } else {
-             
+                counter++
                 previousnode = currentnode
                 currentnode = currentnode.next
             }
@@ -111,7 +111,7 @@ const stack = new stackinput.Stack
         //     this.head = currentnode.next
         // }
         if (currentnode.next != null) {
-            for (i = 0; i <= indexOfKeyword; i++) {
+            for (i = 1; i < indexOfKeyword; i++) {
                 // count++
                 previousnode = currentnode
                 currentnode = currentnode.next
